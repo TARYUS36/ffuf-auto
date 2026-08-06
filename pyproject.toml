@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ffuf-auto"
+version = "2.0.0"
+description = "Parallel vhost / subdomain / directory recon TUI built on ffuf"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "TARYUS" }]
+keywords = ["ffuf", "fuzzing", "recon", "pentest", "ctf", "security"]
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Security",
+]
+dependencies = ["rich>=13.0.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "ruff>=0.4"]
+
+[project.urls]
+Homepage = "https://github.com/TARYUS36/ffuf-auto"
+Issues = "https://github.com/TARYUS36/ffuf-auto/issues"
+
+[project.scripts]
+ffuf-auto = "ffuf_auto:main"
+
+[tool.setuptools]
+py-modules = ["ffuf_auto"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
