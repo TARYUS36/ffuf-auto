@@ -160,7 +160,7 @@ def build_command(cfg: ScanConfig, scan: str) -> list[str]:
     if scan not in SCAN_TYPES:
         raise ValueError(f"unknown scan type: {scan!r}")
 
-    cmd = ["ffuf", "-json", "-s"]
+    cmd = ["ffuf", "-json", "-s", "-ic"]
 
     if scan == "vhost":
         cmd += [
