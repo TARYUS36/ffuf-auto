@@ -8,7 +8,11 @@
   <img src="https://img.shields.io/badge/python-3.9%2B-blue.svg" alt="Python 3.9+">
   <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="MIT License">
   <img src="https://img.shields.io/badge/ffuf-required-orange.svg" alt="Requires ffuf">
-  <a href="https://github.com/<your-username>/ffuf-auto/actions"><img src="https://github.com/<your-username>/ffuf-auto/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://github.com/TARYUS36/ffuf-auto/actions"><img src="https://github.com/TARYUS36/ffuf-auto/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+</p>
+
+<p align="center">
+  <img src="screenshots/demo.png" alt="ffuf-auto running three parallel scans" width="900">
 </p>
 
 ---
@@ -24,12 +28,6 @@ ffuf -w dirs.txt -u http://target/FUZZ
 ```
 
 `ffuf-auto` runs all three **concurrently**, streams their hits into a live three-panel TUI, and writes a structured JSON + Markdown report when it's done — so the findings survive after the screen clears.
-
-## Demo
-
-<p align="center">
-  <img src="screenshots/demo.gif" alt="ffuf-auto demo" width="900">
-</p>
 
 ## Features
 
